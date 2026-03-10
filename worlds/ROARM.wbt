@@ -1,0 +1,425 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.09545574185610782 0.160440956845527 0.9824189028684208 1.170463649736961
+  position -0.5044628759273662 -1.0223013682548274 0.43651868125466414
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+}
+Robot {
+  translation -0.22 0 0.09
+  rotation 0 1 0 5.307156870259904e-06
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+      }
+      device [
+        RotationalMotor {
+          name "motor1"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0 0.00999999999999998
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 1 0
+              anchor 0 0 0.0379
+            }
+            device [
+              RotationalMotor {
+                name "motor2"
+              }
+            ]
+            endPoint Solid {
+              translation -2.481541837659083e-24 0 1.3877787807814457e-17
+              rotation 0 1 0 0
+              children [
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 0
+                    anchor 0.03 0 0.274715
+                  }
+                  device [
+                    RotationalMotor {
+                      name "motor3"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.03 0 0.274715
+                    rotation 0 1 0 0
+                    children [
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 1 0
+                          anchor 0.216 0 0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "motor4"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0.216 0 0
+                          rotation 0 1 0 0
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0.180392 0.180392 0.180392
+                                metalness 0
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../meshes/gripper.STL"
+                                ]
+                              }
+                            }
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0.713726 0.713726 0.713726
+                                metalness 0
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../meshes/Gripper_motor_washer.STL"
+                                ]
+                              }
+                            }
+                          ]
+                          boundingObject Pose {
+                            translation 0.0434 -0.0014 -0.0047
+                            children [
+                              Box {
+                                size 0.029 0.035 0.003
+                              }
+                            ]
+                            translationStep 0.0001
+                          }
+                          physics Physics {
+                          }
+                        }
+                      }
+                      Shape {
+                        appearance PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Mesh {
+                          url [
+                            "../meshes/wrist2.STL"
+                          ]
+                        }
+                      }
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.145098 0.145098 0.145098
+                          metalness 0
+                        }
+                        geometry Mesh {
+                          url [
+                            "../meshes/wrist_gripper.STL"
+                          ]
+                        }
+                      }
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.298039 0.298039 0.298039
+                          metalness 0
+                        }
+                        geometry Mesh {
+                          url [
+                            "../meshes/wrist_2.STL"
+                          ]
+                        }
+                      }
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.176471 0.176471 0.176471
+                          metalness 0
+                        }
+                        geometry Mesh {
+                          url [
+                            "../meshes/Wrist_3.STL"
+                          ]
+                        }
+                      }
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.337255 0.337255 0.337255
+                          metalness 0
+                        }
+                        geometry Mesh {
+                          url [
+                            "../meshes/Wrist_4.STL"
+                          ]
+                        }
+                      }
+                    ]
+                    boundingObject Group {
+                      children [
+                        Pose {
+                          translation 0.012 -0.001 0
+                          children [
+                            Box {
+                              size 0.043 0.029 0.025
+                            }
+                          ]
+                          translationStep 0.001
+                        }
+                        Pose {
+                          translation 0.1043 -0.001 0.00299966
+                          rotation 0 1 0 1.5708
+                          children [
+                            Cylinder {
+                              height 0.137
+                              radius 0.0087
+                            }
+                          ]
+                          translationStep 0.0006
+                        }
+                        Pose {
+                          translation 0.2603 -0.001 -0.0108008
+                          rotation 0 1 0 1.5708
+                          children [
+                            Box {
+                              size 0.0015 0.0355 0.031
+                            }
+                          ]
+                          translationStep 0.0006
+                        }
+                      ]
+                    }
+                    physics Physics {
+                    }
+                  }
+                }
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.654902 0.654902 0.654902
+                    metalness 0
+                  }
+                  geometry Mesh {
+                    url [
+                      "../meshes/Wrist_motors_washer.STL"
+                    ]
+                  }
+                }
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.152941 0.152941 0.152941
+                    metalness 0
+                  }
+                  geometry Mesh {
+                    url [
+                      "../meshes/Base_motor_washer_connector.STL"
+                    ]
+                  }
+                }
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.152941 0.152941 0.152941
+                    metalness 0
+                  }
+                  geometry Mesh {
+                    url [
+                      "../meshes/aluminum_profile.STL"
+                    ]
+                  }
+                }
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.152941 0.152941 0.152941
+                    metalness 0
+                  }
+                  geometry Mesh {
+                    url [
+                      "../meshes/aluminum_profile_connector.STL"
+                    ]
+                  }
+                }
+              ]
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0 0 0.164
+                    children [
+                      Box {
+                        size 0.021 0.038 0.197
+                      }
+                    ]
+                    translationStep 0.001
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+          }
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.231373 0.231373 0.231373
+              metalness 0
+            }
+            geometry Mesh {
+              url [
+                "../meshes/Wrist.STL"
+              ]
+            }
+          }
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.231373 0.231373 0.231373
+              metalness 0
+            }
+            geometry Mesh {
+              url [
+                "../meshes/Wrist_motors.STL"
+              ]
+            }
+          }
+        ]
+        name "Wrist"
+        boundingObject Pose {
+          translation 0 0 0.0257
+          children [
+            Box {
+              size 0.025 0.066 0.045
+            }
+          ]
+          translationStep 0.0002
+        }
+        physics Physics {
+        }
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.137255 0.137255 0.137255
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../meshes/Base.STL"
+        ]
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.137255 0.137255 0.137255
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../meshes/Base2.STL"
+        ]
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.886275 0.592157 0
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../meshes/Base_standoffs.STL"
+        ]
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.631373 0.627451 0.623529
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../meshes/Base3.STL"
+        ]
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.168627 0.168627 0.164706
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../meshes/Base_motor.STL"
+        ]
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.584314
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../meshes/Base_motor_washer.STL"
+        ]
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.584314
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../meshes/Base_motor_Bearing.STL"
+        ]
+      }
+    }
+  ]
+  name "ROARM"
+  boundingObject Group {
+    children [
+      Pose {
+        translation -0.011 0 -0.057
+        children [
+          Box {
+            size 0.09 0.08 0.039
+          }
+        ]
+        translationStep 0.001
+      }
+      Pose {
+        translation 0.008 0 -0.019
+        children [
+          Box {
+            size 0.055 0.042 0.034
+          }
+        ]
+        translationStep 0.001
+      }
+      Pose {
+        translation 0 0 0.004
+        children [
+          Cylinder {
+            height 0.0112
+            radius 0.021
+          }
+        ]
+        translationStep 0.001
+      }
+    ]
+  }
+  physics Physics {
+    density 2000
+    mass 1.5
+  }
+  controller "roarm_controller"
+}
