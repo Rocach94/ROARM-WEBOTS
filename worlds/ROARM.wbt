@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.09545574185610782 0.160440956845527 0.9824189028684208 1.170463649736961
-  position -0.5044628759273662 -1.0223013682548274 0.43651868125466414
+  orientation -0.21456775990670812 0.19678007241438064 0.9566808660724894 1.5954006116980857
+  position 0.026661100732645503 -2.0490793648608054 1.0293337391072566
 }
 TexturedBackground {
 }
@@ -61,13 +61,13 @@ Robot {
                     }
                   ]
                   endPoint Solid {
-                    translation 0.03 0 0.274715
-                    rotation 0 1 0 0
+                    translation 0.030000007079618068 -1.951099498296675e-11 0.27471392567579755
+                    rotation 0.9999966234097578 0.0025986790213595326 6.035497727082773e-06 1.0145929175942769e-06
                     children [
                       HingeJoint {
                         jointParameters HingeJointParameters {
-                          axis 0 1 0
-                          anchor 0.216 0 0
+                          axis 0 0 1
+                          anchor 0.216 0 -0.0027
                         }
                         device [
                           RotationalMotor {
@@ -75,37 +75,36 @@ Robot {
                           }
                         ]
                         endPoint Solid {
-                          translation 0.216 0 0
-                          rotation 0 1 0 0
+                          translation 0.21600000065933503 -7.743655684634297e-13 -0.002700171835538112
                           children [
                             Shape {
                               appearance PBRAppearance {
-                                baseColor 0.180392 0.180392 0.180392
+                                baseColor 0.505882 0.505882 0.505882
                                 metalness 0
                               }
                               geometry Mesh {
                                 url [
-                                  "../meshes/gripper.STL"
+                                  "../meshes/Wrist_4_motor_washer.STL"
                                 ]
                               }
                             }
                             Shape {
                               appearance PBRAppearance {
-                                baseColor 0.713726 0.713726 0.713726
+                                baseColor 0.196078 0.196078 0.196078
                                 metalness 0
                               }
                               geometry Mesh {
                                 url [
-                                  "../meshes/Gripper_motor_washer.STL"
+                                  "../meshes/Wrist_4_motor_washer_gripper.STL"
                                 ]
                               }
                             }
                           ]
                           boundingObject Pose {
-                            translation 0.0434 -0.0014 -0.0047
+                            translation 0.0423 0.0036 0.0015
                             children [
                               Box {
-                                size 0.029 0.035 0.003
+                                size 0.032 0.003 0.0365
                               }
                             ]
                             translationStep 0.0001
@@ -126,17 +125,6 @@ Robot {
                       }
                       Shape {
                         appearance PBRAppearance {
-                          baseColor 0.145098 0.145098 0.145098
-                          metalness 0
-                        }
-                        geometry Mesh {
-                          url [
-                            "../meshes/wrist_gripper.STL"
-                          ]
-                        }
-                      }
-                      Shape {
-                        appearance PBRAppearance {
                           baseColor 0.298039 0.298039 0.298039
                           metalness 0
                         }
@@ -148,23 +136,23 @@ Robot {
                       }
                       Shape {
                         appearance PBRAppearance {
-                          baseColor 0.176471 0.176471 0.176471
+                          baseColor 0.152941 0.152941 0.152941
                           metalness 0
                         }
                         geometry Mesh {
                           url [
-                            "../meshes/Wrist_3.STL"
+                            "../meshes/wrist_2_arm.STL"
                           ]
                         }
                       }
                       Shape {
                         appearance PBRAppearance {
-                          baseColor 0.337255 0.337255 0.337255
+                          baseColor 0.298039 0.298039 0.298039
                           metalness 0
                         }
                         geometry Mesh {
                           url [
-                            "../meshes/Wrist_4.STL"
+                            "../meshes/wrist_2_gripper_motor.STL"
                           ]
                         }
                       }
@@ -192,14 +180,24 @@ Robot {
                           translationStep 0.0006
                         }
                         Pose {
-                          translation 0.2603 -0.001 -0.0108008
-                          rotation 0 1 0 1.5708
+                          translation 0.25958 0.00986 -0.0018008
+                          rotation 0.5773509358554485 0.5773509358554485 0.5773489358556708 2.0944
                           children [
                             Box {
                               size 0.0015 0.0355 0.031
                             }
                           ]
-                          translationStep 0.0006
+                          translationStep 6e-05
+                        }
+                        Pose {
+                          translation 0.20294 7.99924e-05 -0.00180055
+                          rotation 0.5773509358554485 0.5773509358554485 0.5773489358556708 2.0944
+                          children [
+                            Box {
+                              size 0.0229 0.028 0.045
+                            }
+                          ]
+                          translationStep 6e-05
                         }
                       ]
                     }
@@ -419,7 +417,7 @@ Robot {
   }
   physics Physics {
     density 2000
-    mass 1.5
+    mass 5
   }
   controller "roarm_controller"
 }
