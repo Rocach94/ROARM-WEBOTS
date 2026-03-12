@@ -1,32 +1,20 @@
 #VRML_SIM R2025a utf8
 
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
-
-WorldInfo {
-}
-Viewpoint {
-  orientation 0.07526355824279861 0.8456793630175646 -0.5283576551606298 0.519689950752844
-  position -0.8718957030366609 0.21626837355491263 0.6683516402020366
-}
-TexturedBackground {
-}
-TexturedBackgroundLight {
-}
-RectangleArena {
-  floorAppearance Parquetry {
-    type "light strip"
-  }
-}
+PROTO ROARM [
+  field SFVec3f translation 0 0 0
+  field SFRotation rotation 0 1 0 0
+  field SFString    name            "ROARM"       # Is `Robot.name`.
+  field SFString    controller      "<generic>" # Is `Robot.controller`.
+  
+]
+{
 Robot {
-  translation 0.09061525917404273 -6.454436606769063e-07 0.07431771682505342
-  rotation 0.0010510464827766782 0.9999994475541835 -1.3878721108874751e-05 0.00805610453369689
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
-        position -6.025313757123574e-11
         axis 0 0 1
       }
       device [
@@ -35,11 +23,10 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0 0 0.009999999999999997
+        translation 0 0 0.00999999999999998
         children [
           HingeJoint {
             jointParameters HingeJointParameters {
-              position 1.3969419562120742e-07
               axis 0 1 0
               anchor 0 0 0.0379
             }
@@ -49,12 +36,11 @@ Robot {
               }
             ]
             endPoint Solid {
-              translation -5.294410014043747e-09 0 3.400058012914542e-16
-              rotation 0 1 0 1.3978528260658475e-07
+              translation -2.481541837659083e-24 0 1.3877787807814457e-17
+              rotation 0 1 0 0
               children [
                 HingeJoint {
                   jointParameters HingeJointParameters {
-                    position 1.0752775289760704e-07
                     axis 0 1 0
                     anchor 0.03 0 0.274715
                   }
@@ -64,12 +50,11 @@ Robot {
                     }
                   ]
                   endPoint Solid {
-                    translation 0.03000000707950255 -1.9510994982966737e-11 0.2747139256757968
-                    rotation 0.9941737057284202 0.10778980843685956 5.946902769698726e-06 1.024177090969072e-06
+                    translation 0.030000007079618068 -1.951099498296675e-11 0.27471392567579755
+                    rotation 0.9999966234097578 0.0025986790213595326 6.035497727082773e-06 1.0145929175942769e-06
                     children [
                       HingeJoint {
                         jointParameters HingeJointParameters {
-                          position -2.694570038109045e-13
                           axis 0 0 1
                           anchor 0.216 0 -0.0027
                         }
@@ -79,7 +64,7 @@ Robot {
                           }
                         ]
                         endPoint Solid {
-                          translation 0.21600000065933503 -7.743656808383917e-13 -0.002700171835538112
+                          translation 0.21600000065933503 -7.743655684634297e-13 -0.002700171835538112
                           children [
                             Shape {
                               appearance PBRAppearance {
@@ -115,8 +100,6 @@ Robot {
                           }
                           physics Physics {
                           }
-                          linearVelocity -2.274019498518797e-12 1.8768379256810678e-10 -3.3775626444149075e-14
-                          angularVelocity 2.243819030308469e-12 1.5041317836547904e-13 6.407601687954892e-10
                         }
                       }
                       Shape {
@@ -209,8 +192,6 @@ Robot {
                     }
                     physics Physics {
                     }
-                    linearVelocity 3.4361072811028675e-13 8.969567403017666e-11 -2.2615161326257317e-14
-                    angularVelocity 2.31856961651963e-12 1.448600808813516e-13 6.485047517620143e-10
                   }
                 }
                 Shape {
@@ -273,8 +254,6 @@ Robot {
               }
               physics Physics {
               }
-              linearVelocity 1.7939798984617877e-14 7.291327791634968e-13 -2.666693691274013e-15
-              angularVelocity 2.326274489839421e-12 1.3122995711969364e-13 6.485119213180567e-10
             }
           }
           Shape {
@@ -312,8 +291,6 @@ Robot {
         }
         physics Physics {
         }
-        linearVelocity 2.0813878264591585e-15 3.291665533265635e-13 -1.1483492944705552e-15
-        angularVelocity 2.345646747644909e-12 -9.701846852686913e-13 6.485077632074454e-10
       }
     }
     Shape {
@@ -431,19 +408,5 @@ Robot {
     density 2000
     mass 5
   }
-  linearVelocity -8.771193959998441e-17 8.71143882047056e-14 9.094947017729283e-17
-  angularVelocity -2.9069478905021263e-12 -2.613710026287192e-15 1.490023391267576e-14
 }
-ROARM {
-  hidden position_0_0 9.225774126467272e-06
-  hidden rotation_1 0 0 1 9.225780516489303e-06
-  hidden position_1_0 2.793989332986736e-07
-  hidden translation_2 -1.058921957201959e-08 0 1.4779844015322396e-15
-  hidden rotation_2 0 1 0 2.7957056521316965e-07
-  hidden position_2_0 2.150609295689305e-07
-  hidden rotation_3 0.9777429081634604 0.20980659070311633 5.796047876417346e-06 1.0375318041759374e-06
-  hidden position_3_0 -2.3651878472241274e-09
-  translation 0.000615962374622094 -0.2400006450330568 0.07431771676028455
-  rotation 0.0010475183019381608 0.9999994513521346 -9.148626286511975e-07 0.008056107013601606
-  controller "roarm_controller"
 }
